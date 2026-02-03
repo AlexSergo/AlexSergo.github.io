@@ -336,6 +336,240 @@
         .calculate-btn:active {
             opacity: 0.8;
         }
+
+        /* Мобильная адаптация */
+        @media screen and (max-width: 480px) {
+            .header {
+                padding: 16px 12px;
+                padding-top: calc(env(safe-area-inset-top, 0) + 16px);
+            }
+
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .header p {
+                font-size: 0.8rem;
+            }
+
+            .container {
+                padding: 8px;
+            }
+
+            .card {
+                padding: 12px;
+                border-radius: 10px;
+                margin-bottom: 8px;
+            }
+
+            .employee-name input {
+                padding: 12px 14px;
+                font-size: 16px; /* Предотвращает zoom на iOS */
+                border-radius: 8px;
+            }
+
+            .parameter {
+                padding: 12px 0;
+            }
+
+            .param-header {
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+
+            .param-title {
+                font-size: 0.9rem;
+                flex: 1;
+                min-width: 0;
+            }
+
+            .param-weight {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+            }
+
+            .labels {
+                font-size: 0.65rem;
+                margin-bottom: 6px;
+            }
+
+            input[type="range"] {
+                height: 8px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                width: 32px;
+                height: 32px;
+                border-width: 3px;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 32px;
+                height: 32px;
+                border-width: 3px;
+            }
+
+            .value-display {
+                font-size: 0.95rem;
+                margin-top: 6px;
+            }
+
+            .description {
+                padding: 8px 10px;
+                font-size: 0.75rem;
+                margin-top: 8px;
+                line-height: 1.35;
+            }
+
+            .emoji {
+                font-size: 3rem;
+                margin-bottom: 8px;
+            }
+
+            .result {
+                padding: 16px 12px;
+            }
+
+            .result-name {
+                font-size: 1rem;
+            }
+
+            .result-value {
+                font-size: 2.5rem;
+            }
+
+            .result-type {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+
+            .meter {
+                height: 10px;
+                margin: 12px 0 6px;
+            }
+
+            .meter-marker {
+                height: 18px;
+                top: -4px;
+            }
+
+            .meter-labels {
+                font-size: 0.6rem;
+                margin-bottom: 12px;
+            }
+
+            .result-description {
+                font-size: 0.8rem;
+                padding: 10px;
+                line-height: 1.4;
+            }
+
+            .share-btn {
+                padding: 12px;
+                font-size: 0.9rem;
+                margin-top: 12px;
+            }
+
+            .reset-btn {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+
+            .calculate-btn-container.show {
+                padding: 8px;
+                padding-bottom: calc(env(safe-area-inset-bottom, 0) + 8px);
+            }
+
+            .calculate-btn {
+                padding: 14px;
+                font-size: 0.95rem;
+                border-radius: 10px;
+            }
+        }
+
+        /* Очень маленькие экраны (iPhone SE, etc) */
+        @media screen and (max-width: 375px) {
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .param-title {
+                font-size: 0.85rem;
+            }
+
+            .labels {
+                font-size: 0.6rem;
+            }
+
+            .description {
+                font-size: 0.7rem;
+            }
+
+            .emoji {
+                font-size: 2.5rem;
+            }
+
+            .result-value {
+                font-size: 2.2rem;
+            }
+
+            .result-type {
+                font-size: 1rem;
+            }
+
+            .result-description {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Ландшафтная ориентация на мобильных */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .header {
+                padding: 10px 16px;
+                padding-top: calc(env(safe-area-inset-top, 0) + 10px);
+            }
+
+            .header h1 {
+                font-size: 1.1rem;
+                margin-bottom: 2px;
+            }
+
+            .header p {
+                font-size: 0.7rem;
+            }
+
+            .parameter {
+                padding: 8px 0;
+            }
+
+            .emoji {
+                font-size: 2rem;
+                margin-bottom: 4px;
+            }
+
+            .result-value {
+                font-size: 2rem;
+            }
+        }
+
+        /* Тач-устройства */
+        @media (hover: none) and (pointer: coarse) {
+            input[type="range"]::-webkit-slider-thumb {
+                width: 36px;
+                height: 36px;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 36px;
+                height: 36px;
+            }
+
+            .share-btn:hover,
+            .reset-btn:hover,
+            .calculate-btn:hover {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
