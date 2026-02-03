@@ -1,3 +1,4 @@
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -22,9 +23,17 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
+        html {
             height: 100%;
             overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         body {
@@ -56,6 +65,9 @@
 
         .container {
             padding: 12px;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         .card {
@@ -64,6 +76,9 @@
             padding: 16px;
             margin-bottom: 12px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .employee-name input {
@@ -99,9 +114,10 @@
         .param-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 12px;
             gap: 8px;
+            flex-wrap: wrap;
         }
 
         .param-title {
@@ -112,27 +128,28 @@
         }
 
         .param-weight {
-            background: var(--tg-theme-button-color);
-            color: var(--tg-theme-button-text-color);
-            padding: 3px 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 4px 10px;
             border-radius: 12px;
             font-size: 0.7rem;
             font-weight: 600;
             white-space: nowrap;
             flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .labels {
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
-            font-size: 0.7rem;
-            font-weight: 500;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
-        .label-left { color: #e53935; }
-        .label-center { color: #43a047; }
-        .label-right { color: #fb8c00; }
+        .label-left { color: #ff6b6b; }
+        .label-center { color: #51cf66; }
+        .label-right { color: #ffd43b; }
 
         .slider-container {
             position: relative;
@@ -192,6 +209,9 @@
             font-size: 0.8rem;
             color: var(--tg-theme-text-color);
             line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
         }
 
         .result {
