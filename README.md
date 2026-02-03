@@ -255,6 +255,191 @@
             font-size: 5rem;
             margin-bottom: 15px;
         }
+
+        /* Мобильная адаптация */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+
+            .card {
+                padding: 20px 15px;
+                border-radius: 12px;
+            }
+
+            .employee-name input {
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            .parameter {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+
+            .param-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .param-title {
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+
+            .param-weight {
+                font-size: 0.75rem;
+                padding: 3px 8px;
+            }
+
+            .labels {
+                font-size: 0.7rem;
+            }
+
+            input[type="range"] {
+                height: 10px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                width: 28px;
+                height: 28px;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 28px;
+                height: 28px;
+            }
+
+            .value-display {
+                font-size: 1.1rem;
+            }
+
+            .description {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+
+            .calculate-btn {
+                padding: 16px;
+                font-size: 1.1rem;
+                margin-top: 15px;
+            }
+
+            .result {
+                margin-top: 20px;
+                padding: 20px 15px;
+                border-radius: 12px;
+            }
+
+            .emoji {
+                font-size: 3.5rem;
+                margin-bottom: 10px;
+            }
+
+            .result-name {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .result-value {
+                font-size: 2.8rem;
+                margin-bottom: 8px;
+            }
+
+            .result-type {
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+            }
+
+            .result-description {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .meter {
+                height: 16px;
+                margin: 15px 0;
+            }
+
+            .meter-marker {
+                height: 26px;
+                top: -5px;
+            }
+
+            .meter-labels {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Очень маленькие экраны */
+        @media (max-width: 380px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .param-title {
+                font-size: 0.95rem;
+            }
+
+            .labels {
+                font-size: 0.65rem;
+            }
+
+            .description {
+                font-size: 0.8rem;
+            }
+
+            .emoji {
+                font-size: 3rem;
+            }
+
+            .result-value {
+                font-size: 2.2rem;
+            }
+
+            .result-type {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Улучшения для тач-устройств */
+        @media (hover: none) and (pointer: coarse) {
+            input[type="range"]::-webkit-slider-thumb {
+                width: 32px;
+                height: 32px;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 32px;
+                height: 32px;
+            }
+
+            .calculate-btn:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .calculate-btn:active {
+                transform: scale(0.98);
+                opacity: 0.9;
+            }
+        }
     </style>
 </head>
 <body>
